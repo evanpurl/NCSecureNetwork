@@ -31,7 +31,7 @@ class Verifybuttonpanel(discord.ui.View):
 
     @discord.ui.button(label="No", style=discord.ButtonStyle.red,
                        custom_id="NCSN:no")
-    async def yes_button(self, interaction: discord.Interaction, button: discord.ui.Button):
+    async def no_button(self, interaction: discord.Interaction, button: discord.ui.Button):
         try:
             verrole = await dbget(interaction.guild.id, "ncsn", "verifiedroleid")
             role = discord.utils.get(interaction.guild.roles, id=verrole[0])
